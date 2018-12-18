@@ -18,12 +18,12 @@
     - npm install --save-dev babel-plugin-transform-object-rest-spread
   - [修改 eslintrc 文件配置](#修改-eslintrc-文件配置)
     - 替换原有的 `.eslintrc.json` 文件内容
-- <strong>常见问题</strong>(#常见问题)
+- <strong>常见问题</strong>
   - [项目运行报错](#项目运行报错)
     - Couldn't find preset "stage-0" relative to directory
   - [版本号注意不能有尖括号](#版本号注意不能有尖括号)
 - <strong>关闭 ESLint</strong>
-- [<strong>关闭 ESLint 步骤</strong>](#关闭-ESLint-步骤)
+  - [<strong>关闭 ESLint 步骤</strong>](#关闭-ESLint-步骤)
   
 
 
