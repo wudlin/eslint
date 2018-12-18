@@ -23,7 +23,7 @@
     - Couldn't find preset "stage-0" relative to directory
   - [版本号注意不能有尖括号](#版本号注意不能有尖括号)
 - <strong>关闭 ESLint</strong>
-  - [<strong>关闭 ESLint 步骤</strong>](#关闭-ESLint-步骤)
+  - [关闭 ESLint 步骤](#关闭-ESLint-步骤)
   
 
 
@@ -84,16 +84,20 @@ npm install --save-dev babel-plugin-transform-object-rest-spread
 ```
 
 <h1 align="center">修改配置文件</h1>
-
+</br>
 ## 修改 eslintrc 文件配置
+
 文件路径
+
 ```diff
 my-app/
   .eslintrc.json
   src/
   ···
 ```
+
 - 替换原有的 `.eslintrc.json` 文件内容
+
 ```json
 {
   "env": {
@@ -156,16 +160,21 @@ my-app/
   package.json
   ···
 ```
+
 添加如下配置
+
 ```js
 {
   "presets": ["env", "react", "stage-0"],
   "plugins": ["transform-object-rest-spread", "transform-decorators-legacy"]
 }
 ```
+
 <h1 align="center">常见问题</h1>
+</br>
 
 ## 项目运行报错
+
 ```diff
 - Module build failed: Error: Couldn't find preset "stage-0" relative to directory
 ```
