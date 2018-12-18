@@ -1,12 +1,25 @@
 <h1 align="center">安装eslint步骤</h1>
 
-## Table of Contents
+## 目录
 - [全局安装eslint](#安装-eslint)
   - npm install -g eslint
+  - npm install --save-dev eslint@4.13.0
 - [初始化配置文件](#初始化配置文件)
+  - eslint --init
 - [安装第一步](#安装第一步)
+  - [安装流程配置](#安装流程配置)
 - [安装 prettier](#安装-prettier)
-- [修改 .eslintrc.json 文件配置](#修改-eslintrc.json-文件配置)
+  - npm install --save-dev prettier
+- [安装 prettier 相关插件](#安装-prettier-相关插件)
+  - npm install --save-dev eslint eslint-config-prettier eslint-plugin-prettier
+- [安装 babel 依赖](#安装-babel-依赖)
+  - npm install babel-eslint
+  - npm install --save-dev babel-plugin-transform-object-rest-spread
+- [修改 eslintrc.json 文件配置](#修改-eslintrc.json-文件配置)
+  - 替换原有的 `.eslintrc.json` 文件内容
+
+
+
 ## 安装 eslint
 
 #### 全局安装
@@ -29,13 +42,14 @@ eslint --init
 >Note:在根目录下初始化文件,自动创建 `.eslintrc.json` 文件
 
 ## 安装第一步
+#### 安装流程配置
 这里推荐使用第一个
-
 - <strong>Answer Questions about your style</strong> :（推荐）根据提示选择相应的规则设置
 - Use a popular style guide:选择一个已经写好的规则配置
 - Inspect your JavaScript file(s):根据源码文件内容生成规则配置
 
 最后一步：建议配置为JSON文件
+
 >Note:以上文件在安装完成之后均可在 .eslintrc.json文件修改
 ```diff
 my-app/
@@ -133,3 +147,13 @@ my-app/
   "plugins": ["transform-object-rest-spread", "transform-decorators-legacy"]
 }
 ```
+<h1 align="center">常见问题</h1>
+
+```js
+Module build failed: Error: Couldn't find preset "stage-0" relative to directory
+```
+```js
+npm install babel-preset-stage-0
+```
+
+
