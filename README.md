@@ -1,11 +1,12 @@
 <h1 align="center">安装eslint步骤</h1>
 
+## Table of Contents
 - [全局安装eslint](#安装-eslint)
   - npm install -g eslint
 - [初始化配置文件](#初始化配置文件)
 - [安装第一步](#安装第一步)
 - [安装 prettier](#安装-prettier)
-- [修改 .eslintrc.json 文件配置](#修改-.eslintrc.json-文件配置)
+- [修改 .eslintrc.json 文件配置](#修改-eslintrc.json-文件配置)
 ## 安装 eslint
 
 #### 全局安装
@@ -61,7 +62,7 @@ npm install --save-dev babel-plugin-transform-object-rest-spread
 
 <h1 align="center">修改配置文件</h1>
 
-## 修改 .eslintrc.json 文件配置
+## 修改 eslintrc.json 文件配置
 替换原有的 `.eslintrc.json` 文件内容
 ```json
 {
