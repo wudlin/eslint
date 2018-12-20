@@ -42,7 +42,6 @@ npm install -g eslint
 
 #### 单个项目使用
 
->Note:这里是针对webpack3进行的配置
 ```js
 npm install --save-dev eslint@4.13.0
 ```
@@ -260,7 +259,7 @@ my-app/
 	}
 ```
 >Note:这里在项目中定义了变量 `a` 但未使用，在项目运行时 `no-unused-vars` 规则并不会起到抛出错误的作用
->原因是应为后面使用了表情 `a` ，这里 `no-unused-vars` 规则会将表情和变量理解成一种，所以不会抛出错误
+>原因是应为后面使用了表情 `a` ，这里 `no-unused-vars` 规则会将标签和变量理解成一种，所以不会抛出错误
 
 
 
