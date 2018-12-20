@@ -36,13 +36,13 @@
 
 > Note:目前下面教程是针对 webpack3 进行的说明，webpack4 有部分变更
 
-目前下面教程是针对 webpack3 进行的说明, `node` 要求 10 以上版本，正对 [webpack4](#关于-webpack4-版本与-webpack3-的区别) 有部分变更
+目前下面教程是针对 webpack3 进行的说明, `node` 要求 10 以上版本，针对 [webpack4](#关于-webpack4-版本与-webpack3-的区别) 有部分变更
 
 ```js
 npm install -g eslint
 ```
 
-> Note:如果没用全局安装，在接下来的初始化项目中，eslint 命令会抛出不是内部或外部命令
+> Note:如果没用全局安装，在接下来的初始化项目中，eslint 命令会抛出不是内部或外部命令，有装过就跳过
 
 #### 单个项目使用
 
@@ -52,7 +52,7 @@ npm install -g eslint
 npm install --save-dev eslint@4.13.0
 ```
 
-> Note:这里使用 `4.13.0` 版本的原因是照顾 webpack 中针对 `no-unused-vars` 规则以及一些其他问题所产生的解决方式，将版本设置未 `4.13.0` ，针对 webpack4 请看 [关于 webpack4 版本与 webpack3 的区别](#关于webpack4版本与webpack3的区别) 这里会有一些版本号修改
+> Note:这里使用 `4.13.0` 版本的原因是照顾 webpack 中针对 `no-unused-vars` 规则以及一些其他问题所产生的解决方式，将版本设置未 `4.13.0` ，针对 webpack4 请看 [关于 webpack4 版本与 webpack3 的区别](#关于-webpack4-版本与-webpack3-的区别) 这里会有一些版本号修改
 
 ## 初始化配置文件
 
