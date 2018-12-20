@@ -36,7 +36,7 @@
 
 > Note:目前下面教程是针对 webpack3 进行的说明，webpack4 有部分变更
 
-目前下面教程是针对 webpack3 进行的说明, `node` 要求 10 以上版本，正对 webpack4(#关于webpack4版本与webpack3的区别) 有部分变更
+目前下面教程是针对 webpack3 进行的说明, `node` 要求 10 以上版本，正对 [webpack4](#关于webpack4版本与webpack3的区别) 有部分变更
 
 ```js
 npm install -g eslint
