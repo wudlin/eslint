@@ -22,14 +22,19 @@
   - [项目运行报错](#项目运行报错)
     - Couldn't find preset "stage-0" relative to directory
   - [版本号注意不能有尖括号](#版本号注意不能有尖括号)
+- <strong>打包</strong>
+  - [打包](#打包)
 - <strong>关闭 ESLint</strong>
-  - [关闭 ESLint 步骤](#关闭-ESLint-步骤)
-  
+  - [关闭 ESLint 步骤](#关闭-ESLint-步骤)  
+- <strong>关于webpack4</strong>
+  - [关于webpack4版本与webpack3的区别](#关于webpack4版本与webpack3的区别)  
 
 
 ## 安装 eslint
 
 #### 全局安装
+
+>Note:目前下面教程是针对webpack3进行的说明，webpack4有部分变更
 
 ```js
 npm install -g eslint
@@ -38,10 +43,11 @@ npm install -g eslint
 
 #### 单个项目使用
 
+>Note:这里是针对webpack3进行的配置
 ```js
 npm install --save-dev eslint@4.13.0
 ```
-
+>Note:这里使用 `4.13.0` 版本的原因是照顾webpack中针对 `no-unused-vars` 规则以及一些其他问题所产生的解决方式，将版本设置未 `4.13.0` ，针对webpack4请看 [关于webpack4版本与webpack3的区别](#关于webpack4版本与webpack3的区别) 这里会有一些版本号修改
 ## 初始化配置文件
 ```js
 eslint --init
@@ -188,6 +194,29 @@ npm install babel-preset-stage-0
 <img src="https://github.com/wudlin/eslint/blob/master/edition.png?width=890">
 
 
+<h1 align="center">打包</h1>
+
+## 打包
+下面段代码定义了一个未使用变量
+>Note:打包过程中如果运行报错的规则在，打包同样会阻止并提示错误
+```js
+	render() {
+	  var b;//定义未使用变量，这里用 `let const` 是一样效果
+		// console.log('测试log警告影响打包');
+		return (
+      ···
+		);
+	}
+```
+下面打包报错内容与运行时抛出内容相同
+>Note:这里警告并不会阻止打包
+```js
+./src/App.js
+  Line 9:  'b' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each error.
+```
+
 <h1 align="center">关闭ESLint</h1>
 
 ## 关闭 ESLint 步骤
@@ -204,3 +233,35 @@ my-app/
 >Note:只会关闭eslint校验，不会影响 `git` 钩子，即 `husky` 的执行
 <img src="https://github.com/wudlin/eslint/blob/master/eslint_off1.png?width=890">
 <img src="https://github.com/wudlin/eslint/blob/master/eslint_off2.png?width=890">
+
+<h1 align="center">关于webpack4</h1>
+
+## 关于webpack4版本与webpack3的区别
+
+>Note:这里的my-app所用的是webpack4版本,与上面所说的版本号有部分区别
+```diff
+-   "babel-eslint": "^7.2.3",
++   "babel-eslint": "9.0.0",
+-   "eslint": "4.13.0",
++   "eslint": "5.6.0",
+```
+- 这里解决了 `"eslint": "4.13.0"` 对于定义未使用变量需要配置 `.babelrc` 文件以及其中对于 `"stage-0"` 的配置问题
+- 发现产生新的问题
+```js
+	render() {
+		var a;
+		return (
+			<div className='App'>
+					<a href='https://github.com/wudlin/eslint'>
+						Learn eslint --prettier
+					</a>
+				</header>
+			</div>
+		);
+	}
+```
+>Note:这里在项目中定义了变量 `a` 但未使用，在项目运行时 `no-unused-vars` 规则并不会起到抛出错误的作用
+>原因是应为后面使用了表情 `a` ，这里 `no-unused-vars` 规则会将表情和变量理解成一种，所以不会抛出错误
+
+
+
