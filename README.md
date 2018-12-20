@@ -28,7 +28,7 @@
 - <strong>关闭 ESLint</strong>
   - [关闭 ESLint 步骤](#关闭-ESLint-步骤)
 - <strong>关于 webpack4</strong>
-  - [关于 webpack4 版本与 webpack3 的区别](#关于-webpack4-版本与-webpack-3的区别)
+  - [关于 webpack4 版本与 webpack3 的区别](#关于-webpack4-版本与-webpack3-的区别)
 
 ## 安装 eslint
 
@@ -36,7 +36,7 @@
 
 > Note:目前下面教程是针对 webpack3 进行的说明，webpack4 有部分变更
 
-目前下面教程是针对 webpack3 进行的说明, `node` 要求 10 以上版本，正对 [webpack4](#关于-webpack4-版本与-webpack-3的区别) 有部分变更
+目前下面教程是针对 webpack3 进行的说明, `node` 要求 10 以上版本，正对 [webpack4](#关于-webpack4-版本与-webpack3-的区别) 有部分变更
 
 ```js
 npm install -g eslint
