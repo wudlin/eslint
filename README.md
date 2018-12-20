@@ -204,7 +204,7 @@ npm install babel-preset-stage-0
 	  var b;//定义未使用变量，这里用 `let const` 是一样效果
 		// console.log('测试log警告影响打包');
 		return (
-      ···
+      		···
 		);
 	}
 ```
