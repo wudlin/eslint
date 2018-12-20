@@ -34,8 +34,7 @@
 
 #### 全局安装
 
->Note:目前下面教程是针对webpack3进行的说明，webpack4有部分变更
-
+目前下面教程是针对webpack3进行的说明，webpack4有部分变更, `node` 要求10以上版本
 ```js
 npm install -g eslint
 ```
