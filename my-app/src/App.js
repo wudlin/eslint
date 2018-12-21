@@ -6,7 +6,7 @@ class App extends Component {
 		this.state = {};
 	}
 	render() {
-		// var b;
+		// var a;
 		// console.log('测试log警告影响打包');
 		return (
 			<div className='App'>
