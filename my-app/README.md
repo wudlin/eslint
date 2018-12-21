@@ -1,6 +1,6 @@
 ## 项目说名
 
-用于测试项目,使用 `webpack4` 版
+用于测试项目,使用 `webpack4` 版本，及 `vcsode` 插件 `Prettier - Code formatter` 在 `.vscode` 中的配置
 
 #### 配置更改
 
