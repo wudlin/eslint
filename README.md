@@ -1,4 +1,5 @@
 <h1 align="center">安装eslint步骤</h1>
+<a href='https://cn.eslint.org' target="_blank">中文官网</a>
 
 ## 目录
 
