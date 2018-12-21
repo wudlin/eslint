@@ -10,7 +10,7 @@ class App extends Component {
 		// console.log('测试log警告影响打包');
 		return (
 			<div className='App'>
-				<header className='App-header'>
+				<header className="App-header">
 					<p>一个简单的 eslint + prettier 规范下的项目</p>
 					<a
 						className='App-link'
