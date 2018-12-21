@@ -29,6 +29,9 @@
   - [关闭 ESLint 步骤](#关闭-ESLint-步骤)
 - <strong>关于 webpack4</strong>
   - [关于 webpack4 版本与 webpack3 的区别](#关于-webpack4-版本与-webpack3-的区别)
+- <strong>关于 prettier 插件安装</strong>
+  - [vscode 中 prettier 插件安装](#vscode-中-prettier-插件安装)
+
 
 ## 安装 eslint
 
@@ -261,9 +264,10 @@ my-app/
 将 webpack.config.dev.js 中下面两段带有 eslintFormatter 字段的代码注释，即可关闭 eslint
 
 > Note:只会关闭 eslint 校验，不会影响 `git` 钩子，即 `husky` 的执行
-> <img src="https://github.com/wudlin/eslint/blob/master/img/eslint_off1.png?width=890">
 
-> <img src="https://github.com/wudlin/eslint/blob/master/img/eslint_off2.png?width=890">
+<img src="https://github.com/wudlin/eslint/blob/master/img/eslint_off1.png?width=890">
+
+<img src="https://github.com/wudlin/eslint/blob/master/img/eslint_off2.png?width=890">
 
 <h1 align="center">关于webpack4</h1>
 
@@ -297,3 +301,40 @@ my-app/
 
 > Note:这里在项目中定义了变量 `a` 但未使用，在项目运行时 `no-unused-vars` 规则并不会起到抛出错误的作用
 > 原因是应为后面使用了表情 `a` ，这里 `no-unused-vars` 规则会将表情和变量理解成一种，所以不会抛出错误
+
+<h1 align="center">关于 prettier 插件安装</h1>
+
+## vscode 中 prettier 插件安装
+
+>Note:这里列举是是关于 `vscode` 中，插件 `Prettier - Code formatter` 的安装与使用
+- 在 `vscode` 扩展中找到插件 `Prettier - Code formatter`
+
+<img src="https://github.com/wudlin/eslint/blob/master/img/Prettier_Code%20formatter.png?width=890">
+
+- 在 `vscode` 界面按 `ctrl+shift+p` 输入 `Workspace Settings`
+
+<img src="https://github.com/wudlin/eslint/blob/master/img/open_workspace.png?width=890">
+
+- 找到 `setting.json` 
+
+<img src="https://github.com/wudlin/eslint/blob/master/img/setting.png?width=890">
+
+- 在 `.vscode` 中自动生成文件 `setting.json` 
+
+```diff
+my-app/
+  .vscode/
+  	setting.json
+  src/
+  ···
+```
+- 添加文件内容
+```js
+{
+  "git.ignoreLimitWarning": true,
+  "prettier.eslintIntegration": true,
+  "editor.formatOnSave": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true
+}
+```
+>Note:这里第一次使用的时候需右键 `设置文档格式` 生效后，进行 `保存` 就会自动更改文件格式
