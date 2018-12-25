@@ -28,6 +28,7 @@
   - [打包](#打包)
 - <strong>关闭 ESLint</strong>
   - [关闭 ESLint 步骤](#关闭-ESLint-步骤)
+    - [关于 webpack4 修改](#关于-webpack4-修改)
 - <strong>关于 webpack4</strong>
   - [关于 webpack4 版本与 webpack3 的区别](#关于-webpack4-版本与-webpack3-的区别)
 - <strong>关于 prettier 插件安装</strong>
@@ -251,24 +252,46 @@ Search for the keywords to learn more about each error.
 
 ## 关闭 ESLint 步骤
 
-修改 `webpack.config.dev.js` 文件
+修改 `webpack.config.dev.js` 和 `webpack.config.prod.js` 文件
 
 ```diff
 my-app/
   config/
     webpack.config.dev.js
+    webpack.config.prod.js
   .eslintrc.json
   src/
   ···
 ```
 
-将 webpack.config.dev.js 中下面两段带有 eslintFormatter 字段的代码注释，即可关闭 eslint
+将文件中下面两段带有 eslintFormatter 字段的代码注释，即可关闭 eslint
 
 > Note:只会关闭 eslint 校验，不会影响 `git` 钩子，即 `husky` 的执行
 
 <img src="https://github.com/wudlin/eslint/blob/master/img/eslint_off1.png?width=890">
 
 <img src="https://github.com/wudlin/eslint/blob/master/img/eslint_off2.png?width=890">
+
+#### 关于 webpack4 修改
+
+webpack4 同样找到 `webpack.config.dev.js` 和 `webpack.config.prod.js` 文件，改由注释
+```diff
+      {
+        test: /\.(js|mjs|jsx)$/,
+        enforce: 'pre',
+        use: [
+          {
+            options: {
+              formatter: require.resolve('react-dev-utils/eslintFormatter'),
+              eslintPath: require.resolve('eslint'),
+              
+            },
+            loader: require.resolve('eslint-loader'),
+          },
+        ],
+        include: paths.appSrc,
+      },
+```
 
 <h1 align="center">关于webpack4</h1>
 
