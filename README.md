@@ -164,6 +164,7 @@ my-app/
     "eqeqeq": 2,
     "default-case": 2,
     "no-redeclare": 2,
+    "no-dupe-class-members": 2,
     "no-multiple-empty-lines": ["error", { "max": 0 }],
     "jsx-quotes": ["error", "prefer-single"],
     "react/jsx-uses-vars": 2,
