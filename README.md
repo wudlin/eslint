@@ -175,7 +175,8 @@ my-app/
     "react/no-unescaped-entities": 0,
     "react/no-deprecated": 0,
     "react/no-direct-mutation-state": 0,
-    "react/jsx-no-target-blank": 0
+    "react/jsx-no-target-blank": 0,
+    "react/display-name": 0
   }
 }
 ```
