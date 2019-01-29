@@ -103,7 +103,7 @@ npm install --save-dev prettier
 ## 安装 prettier 相关插件
 
 ```js
-npm install --save-dev eslint eslint-config-prettier eslint-plugin-prettier
+npm install --save-dev eslint-config-prettier eslint-plugin-prettier
 ```
 
 ## 安装 babel 依赖
