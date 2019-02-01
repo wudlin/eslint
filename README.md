@@ -14,7 +14,7 @@
   - [安装 prettier](#安装-prettier)
     - npm install --save-dev prettier
   - [安装 prettier 相关插件](#安装-prettier-相关插件)
-    - npm install --save-dev eslint eslint-config-prettier eslint-plugin-prettier
+    - npm install --save-dev eslint-config-prettier eslint-plugin-prettier
   - [安装 babel 依赖](#安装-babel-依赖)
     - npm install babel-eslint
     - npm install --save-dev babel-plugin-transform-object-rest-spread
