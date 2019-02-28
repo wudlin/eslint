@@ -5,7 +5,7 @@
 
 - <strong>安装流程</strong>
   - [全局安装 eslint](#安装-eslint)
-    - npm install -g eslint
+    - npm install -g eslint@4.13.0
     - npm install --save-dev eslint@4.13.0
   - [初始化配置文件](#初始化配置文件)
     - eslint --init
@@ -45,7 +45,7 @@
 目前下面教程是针对 webpack3 进行的说明, `node` 要求 10 以上版本，针对 [webpack4](#关于-webpack4-版本与-webpack3-的区别) 有部分变更
 
 ```js
-npm install -g eslint
+npm install -g eslint@4.13.0
 ```
 
 > Note:如果没用全局安装，在接下来的初始化项目中，eslint 命令会抛出不是内部或外部命令，有装过就跳过
