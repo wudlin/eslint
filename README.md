@@ -81,7 +81,7 @@ eslint --init
 
 #### 完整配置
 
-<img src="https://github.com/wudlin/eslint/blob/master/img/eslintInit.png?width=890">
+<img src="./img/eslintInit.png?width=890">
 
 > Note:以上文件在安装完成之后均可在 .eslintrc.json 文件修改
 
@@ -220,7 +220,7 @@ npm install babel-preset-stage-0
 
 ## 版本号注意不能有尖括号
 
-<img src="https://github.com/wudlin/eslint/blob/master/img/edition.png?width=890">
+<img src="./img/edition.png?width=890">
 
 <h1 align="center">打包</h1>
 
@@ -271,9 +271,9 @@ my-app/
 
 > Note:只会关闭 eslint 校验，不会影响 `git` 钩子，即 `husky` 的执行
 
-<img src="https://github.com/wudlin/eslint/blob/master/img/eslint_off1.png?width=890">
+<img src="./img/eslint_off1.png?width=890">
 
-<img src="https://github.com/wudlin/eslint/blob/master/img/eslint_off2.png?width=890">
+<img src="./img/eslint_off2.png?width=890">
 
 #### 关于 webpack4 修改
 
@@ -343,15 +343,15 @@ webpack4 同样找到 `webpack.config.dev.js` 和 `webpack.config.prod.js` 文�
 >Note:这里列举是是关于 `vscode` 中，插件 `Prettier - Code formatter` 的安装与使用
 - 在 `vscode` 扩展中找到插件 `Prettier - Code formatter`
 
-<img src="https://github.com/wudlin/eslint/blob/master/img/Prettier_Code%20formatter.png?width=890">
+<img src="./img/Prettier_Code%20formatter.png?width=890">
 
 - 在 `vscode` 界面按 `ctrl+shift+p` 输入 `Workspace Settings`
 
-<img src="https://github.com/wudlin/eslint/blob/master/img/open_workspace.png?width=890">
+<img src="./img/open_workspace.png?width=890">
 
 - 找到 `setting.json` 
 
-<img src="https://github.com/wudlin/eslint/blob/master/img/setting.png?width=890">
+<img src="./img/setting.png?width=890">
 
 - 在 `.vscode` 中自动生成文件 `setting.json` 
 
