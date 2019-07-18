@@ -1,5 +1,7 @@
 <h1 align="center">安装eslint步骤</h1>
+
 <a href='https://cn.eslint.org' target="_blank">中文官网</a>
+
 
 ## 目录
 
@@ -114,7 +116,7 @@ npm install --save-dev babel-plugin-transform-object-rest-spread
 ```
 
 <h1 align="center">修改配置文件</h1>
-</br>
+
 
 ## 修改 eslintrc 文件配置
 
@@ -148,7 +150,6 @@ my-app/
   },
   "plugins": ["react", "prettier"],
   "rules": {
-    "indent": ["error", "tab"],
     "linebreak-style": ["error", "windows"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
@@ -177,7 +178,9 @@ my-app/
     "react/no-deprecated": 0,
     "react/no-direct-mutation-state": 0,
     "react/jsx-no-target-blank": 0,
-    "react/display-name": 0
+    "react/display-name": 0,
+    "react/jsx-no-duplicate-props": 0,
+    "react/jsx-no-comment-textnodes": 0
   }
 }
 ```
